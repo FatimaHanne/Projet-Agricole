@@ -7,8 +7,11 @@
 }
 body{
      line-height: 1.6;
-    color: #333;
+     color: #333;
      font-family: "Poppins", sans-serif;
+     width: 100%;
+     overflow-x: hidden; 
+     /* background-color: red; */
 }
 header {
     background: linear-gradient(135deg, #2c5530, #4a7c59);
@@ -73,26 +76,28 @@ section {
 }
 
 .hero {
-    position: relative;
+    /* position: relative; */
     color: white;
     text-align: center;
-    margin-top: 70px;
-    padding: 6rem 2rem;
+    margin:0;
+    padding: 12rem 0;
     overflow: hidden; /* éviter que le flou dépasse */
 }
 
 .hero::before {
     content: "";
     position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: url('https://lepaysann.com/wp-content/uploads/2024/08/photo-Riziculture.jpg');
-    background-size: cover;
-    background-position: center;
-    filter: blur(2px) brightness(0.7);
-    z-index: -1; 
+    left: -5px;
+    right: -5px;
+    top: -5px;
+    bottom: -5px;
+    background-image: url('https://lepaysann.com/wp-content/uploads/2024/08/photo-Riziculture.jpg');
+    background-size: cover;       /* l'image occupe toute la largeur */
+    background-position: center;  /* l'image est centrée */
+    background-repeat: no-repeat; /* éviter les répétitions */
+    filter: blur(1px) brightness(0.5);
+    z-index: -1;
+    height: 80%;
 }
 
 .hero h1 {
@@ -269,7 +274,7 @@ h2::after {
 
 /* -------- SECTION CONTACT -------- */
 #contact {
-  background: #f1f8f4; /* fond doux */
+  background: #3E6B47 ; /* fond doux */
   padding: 3rem 2rem;
   border-radius: 12px;
   margin-top: 2rem;
@@ -277,7 +282,7 @@ h2::after {
 }
 
 #contact h2 {
-  color: #3E6B47;
+  color: #f1f8f4;
   margin-bottom: 2rem;
   font-size: 2rem;
 }
@@ -300,7 +305,7 @@ h2::after {
 }
 
 .contact-card {
-  background: white;
+  background: #f1f8f4;
   border: 1px solid #A8D5BA;
   border-radius: 10px;
   padding: 1.5rem;
@@ -332,8 +337,8 @@ h2::after {
 }
 
 .social-button {
-  background: #497956;
-  color: white;
+  background: #f1f8f4;
+  color: #497956;
   padding: 0.7rem 1.2rem;
   border-radius: 8px;
   text-decoration: none;
@@ -342,15 +347,16 @@ h2::after {
 }
 
 .social-button:hover {
-  background: #3E6B47;
+  background: #A8D5BA;
   transform: scale(1.05);
+  color: #f1f8f4;
 }
 
 /* note footer */
 .footer-note {
   margin-top: 1.5rem;
   font-size: 0.9rem;
-  color: #555;
+  color: #f1f8f4;
 }
 
 /* Responsive */
