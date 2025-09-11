@@ -5,14 +5,16 @@
     padding: 0;
     box-sizing: border-box;
 }
-body{
-     line-height: 1.6;
-     color: #333;
-     font-family: "Poppins", sans-serif;
-     width: 100%;
-     overflow-x: hidden; 
-     /* background-color: red; */
+
+body {
+    font-family: "Poppins", sans-serif;
+    line-height: 1.6;
+    color: #333;
+    width: 100%;
+    overflow-x: hidden;
 }
+
+/* ------------------- HEADER ------------------- */
 header {
     background: linear-gradient(135deg, #2c5530, #4a7c59);
     color: white;
@@ -23,6 +25,7 @@ header {
     z-index: 1000;
     box-shadow: 0 2px 10px rgba(0,0,0,0.1);
 }
+
 nav {
     max-width: 1200px;
     margin: 0 auto;
@@ -31,11 +34,13 @@ nav {
     align-items: center;
     padding: 0 2rem;
 }
-.logo{
+
+.logo {
     font-size: 1.8rem;
     font-weight: bold;
     color: #A8D5BA;
 }
+
 .nav-links {
     display: flex;
     list-style: none;
@@ -45,7 +50,7 @@ nav {
 .nav-links a {
     color: white;
     text-decoration: none;
-    transition: color 0.3s;
+    transition: color 0.3s, background 0.3s;
     padding: 0.5rem 1rem;
     border-radius: 5px;
 }
@@ -54,11 +59,8 @@ nav {
     background: rgba(255,255,255,0.1);
     color: #A8D5BA;
 }
-.nav-links li a{
-    text-decoration: none;
-    color: white;
-    /* margin: 15px; */
-}
+
+/* MOBILE MENU */
 .nav-toggle {
     display: none;
 }
@@ -66,38 +68,36 @@ nav {
 .mobile-menu-label {
     display: none;
     cursor: pointer;
-    color: white;
     font-size: 1.5rem;
-}
-section {
-    padding: 4rem 2rem;
-    max-width: 1200px;
-    margin: 0 auto;
+    color: white;
 }
 
+/* ------------------- HERO ------------------- */
 .hero {
-    /* position: relative; */
-    color: white;
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     text-align: center;
-    margin:0;
-    padding: 12rem 0;
-    overflow: hidden; /* éviter que le flou dépasse */
+    padding: 12rem 2rem;
+    background: url('https://lepaysann.com/wp-content/uploads/2024/08/photo-Riziculture.jpg') center/cover no-repeat;
 }
 
 .hero::before {
     content: "";
     position: absolute;
-    left: -5px;
-    right: -5px;
-    top: -5px;
-    bottom: -5px;
-    background-image: url('https://lepaysann.com/wp-content/uploads/2024/08/photo-Riziculture.jpg');
-    background-size: cover;       /* l'image occupe toute la largeur */
-    background-position: center;  /* l'image est centrée */
-    background-repeat: no-repeat; /* éviter les répétitions */
-    filter: blur(1px) brightness(0.5);
-    z-index: -1;
-    height: 80%;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: rgba(0,0,0,0.4);
+    z-index: 0;
+}
+
+.hero h1, .hero p {
+    position: relative;
+    z-index: 1;
+    color: white;
 }
 
 .hero h1 {
@@ -105,12 +105,18 @@ section {
     margin-bottom: 1rem;
     text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
 }
+
 .hero p {
-    font-size: 1rem;
-    margin-bottom: 2rem;
+    font-size: 1.2rem;
     max-width: 600px;
-    margin-left: auto;
-    margin-right: auto;
+    margin: 0 auto 2rem auto;
+}
+
+/* ------------------- SECTIONS ------------------- */
+section {
+    padding: 4rem 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
 h2 {
@@ -131,27 +137,33 @@ h2::after {
     border-radius: 2px;
 }
 
-.features-grid {
+/* ------------------- FEATURES ------------------- */
+.features-grid, .targets-grid, .impact-starts, .benefits-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 2rem;
-    margin-top: 3rem;
 }
+
+.features-grid {
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+}
+
+.feature-card, .target-card, .stat-card {
+    border-radius: 15px;
+    text-align: center;
+    padding: 2rem;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
 .feature-card {
     background: white;
-    padding: 2rem;
-    border-radius: 15px;
-    box-shadow: 0 5px 20px rgba(0,0,0,0.1);
-    text-align: center;
-    transition: transform 0.3s, box-shadow 0.3s;
     border-top: 4px solid #A8D5BA;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.1);
 }
 
 .feature-card:hover {
     transform: translateY(-5px);
     box-shadow: 0 10px 30px rgba(0,0,0,0.15);
 }
-
 
 .feature-card h3 {
     color: #3E6B47;
@@ -162,13 +174,14 @@ h2::after {
 .feature-list {
     list-style: none;
     text-align: left;
+    padding-left: 0;
 }
 
 .feature-list li {
-    padding: 0.5rem 0;
+    padding: 0.5rem 0 0.5rem 1.5rem;
     position: relative;
-    padding-left: 1.5rem;
 }
+
 .feature-list li::before {
     content: '✓';
     position: absolute;
@@ -177,18 +190,13 @@ h2::after {
     font-weight: bold;
 }
 
+/* ------------------- TARGETS ------------------- */
 .targets-grid {
-    display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 2rem;
-    margin-top: 3rem;
 }
 
 .target-card {
     background: linear-gradient(135deg, #f8f9fa, #e9ecef);
-    padding: 2rem;
-    border-radius: 15px;
-    text-align: center;
     border-left: 5px solid #497956;
     transition: all 0.3s;
 }
@@ -198,22 +206,15 @@ h2::after {
     transform: scale(1.02);
 }
 
-
-.impact-starts{
-    display: grid;
+/* ------------------- IMPACT ------------------- */
+.impact-starts {
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 2rem;
-    margin-top: 3rem;
 }
 
 .stat-card {
     background: linear-gradient(135deg, #497956, #3E6B47);
     color: white;
-    padding: 2rem;
-    border-radius: 15px;
-    text-align: center;
     border-left: 5px solid #497956;
-    transition: transform 0.3s;
 }
 
 .stat-card:hover {
@@ -226,140 +227,132 @@ h2::after {
     color: #A8D5BA;
 }
 
-.section-description{
+.section-description {
     text-align: center;
 }
 
-
+/* ------------------- BENEFICES ------------------- */
 .bénéfice {
-  background: white; /* fond doux */
-  padding: 3rem 2rem;
-  border-radius: 12px;
-  margin-top: 2rem;
+    background: white;
+    padding: 3rem 2rem;
+    border-radius: 12px;
+    margin-top: 2rem;
     box-shadow: 0 5px 20px rgba(0,0,0,0.1);
 }
 
 .bénéfice h2 {
-  text-align: center;
-  color: #3E6B47;
-  margin-bottom: 2rem;
-  font-size: 2rem;
+    text-align: center;
+    color: #3E6B47;
+    margin-bottom: 2rem;
+    font-size: 2rem;
 }
 
-/* grille à 3 colonnes */
 .benefits-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 2rem;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
 }
 
 .benefits-grid div {
-  background: #A8D5BA;
-  border: 1px solid #A8D5BA;
-  border-radius: 10px;
-  padding: 1.5rem;
-  transition: transform 0.3s, box-shadow 0.3s;
+    background: #A8D5BA;
+    border: 1px solid #A8D5BA;
+    border-radius: 10px;
+    padding: 1.5rem;
 }
 
 .benefits-grid div:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
 }
 
 .benefits-grid h4 {
-  color: #497956;
-  margin-bottom: 1rem;
-  font-size: 1.3rem;
+    color: #497956;
+    margin-bottom: 1rem;
+    font-size: 1.3rem;
 }
 
-/* -------- SECTION CONTACT -------- */
+/* ------------------- CONTACT ------------------- */
 #contact {
-  background: #3E6B47 ; /* fond doux */
-  padding: 3rem 2rem;
-  border-radius: 12px;
-  margin-top: 2rem;
-  text-align: center;
+    background: #3E6B47;
+    padding: 3rem 2rem;
+    border-radius: 12px;
+    margin-top: 2rem;
+    text-align: center;
+    color: #f1f8f4;
 }
 
-#contact h2 {
-  color: #f1f8f4;
-  margin-bottom: 2rem;
-  font-size: 2rem;
-}
-
-/* bloc principal */
 .footer-contact {
-  max-width: 900px;
-  margin: auto;
-  display: flex;
-  flex-direction: column;
-  gap: 2rem;
+    max-width: 900px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
 }
 
-/* cartes infos (email, tel, adresse) */
 .contact-info {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 1.5rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1.5rem;
 }
-
+#contact h2 {
+    color: #f1f8f4; /* blanc clair */
+    z-index: 10;    /* pour qu’il soit au-dessus des autres éléments */
+    position: relative;
+}
 .contact-card {
-  background: #f1f8f4;
-  border: 1px solid #A8D5BA;
-  border-radius: 10px;
-  padding: 1.5rem;
-  width: 250px;
-  transition: transform 0.3s, box-shadow 0.3s;
+    background: #f1f8f4;
+    border: 1px solid #A8D5BA;
+    border-radius: 10px;
+    padding: 1.5rem;
+    width: 250px;
+    transition: transform 0.3s, box-shadow 0.3s;
+    color: #497956;
 }
 
 .contact-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+    transform: translateY(-5px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
 }
 
 .contact-icon {
-  font-size: 2rem;
-  margin-bottom: 0.5rem;
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
 }
 
 .contact-card h3 {
-  color: #497956;
-  margin-bottom: 0.5rem;
+    color: #497956;
+    margin-bottom: 0.5rem;
 }
 
-/* boutons réseaux sociaux */
 .socio-info {
-  display: flex;
-  justify-content: center;
-  gap: 1rem;
-  flex-wrap: wrap;
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    flex-wrap: wrap;
 }
 
 .social-button {
-  background: #f1f8f4;
-  color: #497956;
-  padding: 0.7rem 1.2rem;
-  border-radius: 8px;
-  text-decoration: none;
-  font-weight: bold;
-  transition: background 0.3s, transform 0.2s;
+    background: #f1f8f4;
+    color: #497956;
+    padding: 0.7rem 1.2rem;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background 0.3s, transform 0.2s;
 }
 
 .social-button:hover {
-  background: #A8D5BA;
-  transform: scale(1.05);
-  color: #f1f8f4;
+    background: #A8D5BA;
+    color: #f1f8f4;
+    transform: scale(1.05);
 }
 
-/* note footer */
 .footer-note {
-  margin-top: 1.5rem;
-  font-size: 0.9rem;
-  color: #f1f8f4;
+    margin-top: 1.5rem;
+    font-size: 0.9rem;
+    color: #f1f8f4;
 }
 
-/* Responsive */
+/* ------------------- RESPONSIVE ------------------- */
 @media (max-width: 768px) {
     .mobile-menu-label {
         display: block;
@@ -376,30 +369,32 @@ h2::after {
         justify-content: flex-start;
         align-items: center;
         padding-top: 2rem;
-        transition: left 0.3s ease;
+        transition: left 0.3s ease, opacity 0.3s ease;
+        opacity: 0;
         z-index: 999;
     }
 
     .nav-toggle:checked + .mobile-menu-label + .nav-links {
         left: 0;
+        opacity: 1;
     }
-    
+
     .hero h1 {
         font-size: 2rem;
     }
-    
+
     .hero p {
-        font-size: 1.1rem;
+        font-size: 1rem;
     }
-    
+
     h2 {
         font-size: 2rem;
     }
-    
+
     section {
         padding: 3rem 1rem;
     }
-    
+
     nav {
         padding: 0 1rem;
     }
@@ -409,7 +404,7 @@ h2::after {
     .hero {
         padding: 4rem 1rem;
     }
-    
+
     .feature-card, .target-card, .contact-card {
         margin: 1rem 0;
     }
