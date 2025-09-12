@@ -4,16 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <title>Platfrome-Agricole-Intelligente</title>
 </head>
 <body>
     <header>
         <nav>
-            <div  class="logo">🌱 CultivTech</div>
+            <h1  class="logo">🌱 Cultiv<span>Tech.</span></h1>
              <input type="checkbox" id="nav-toggle" class="nav-toggle">
             <label for="nav-toggle" class="mobile-menu-label">☰</label>
             <ul class="nav-links">
-               <li><a href="">Accueil</a></li>
+               <li><a href="" class="Accueil">Accueil</a></li>
                 <li><a href="">Solution</a></li>
                  <li><a href="">Cibles</a></li>
                   <li><a href="">Contact</a></li>
@@ -23,6 +24,10 @@
     <section id="acceuil" class="hero">
        <h1>CultivTech</h1>
        <p>La plateforme intelligente qui connecte les agriculteurs aux solutions innovantes  pour une agriculture durable et productive</p>
+       <div class="btns">
+        <button class="btn1">Découvrir la solution</button>
+        <button class="btn2">Démo gratuit</button>
+       </div>
     </section>
     <section id="solution">
         <h2>Nos solutions</h2>
@@ -70,11 +75,11 @@
     <section id="cible" class="section-alt">
             <h2>Nos Cibles</h2>
              <p class="section-description">
-                CultivTech s'adresse à tous les acteurs de l'écosystème agricole moderne.
+                CultivTech s'adresse à tous les acteurs de l'écosystème agricole<br>moderne.
             </p>
             <div  class="targets-grid">
                  <div class="target-card">
-                     <h3> Agriculteurs Modernes</h3>
+                     <h3>Agriculteurs Modernes</h3>
                      <p>Exploitants cherchant à moderniser leurs pratiques et optimiser leurs rendements grâce aux technologies numériques.</p>
                  </div>
                  <div class="target-card">
@@ -94,7 +99,7 @@
     <section id="impact">
         <h2>Impact attendu</h2>
           <p class="section-description">
-            CultivTech transforme l'agriculture en apportant des bénéfices concrets et mesurables.
+            CultivTech transforme l'agriculture en apportant des bénéfices<br>concrets et mesurables.
         </p>
         <div class="impact-starts">
             <div class="stat-card">
@@ -149,31 +154,46 @@
         <div class="footer-contact">
              <div class="contact-info">
                 <div class="contact-card">
-                    <div class="contact-icon">📧</div>
-                    <h3>Email</h3>
+                    <div class="contact-icon"><i class="fa-solid fa-phone" style="color: #3E6B47;"></i></div>
+                    <p> +221 77 392 82 72</p>
+                </div>
+                <div class="contact-card">
+                    <div class="contact-icon"><i class="fa-solid fa-envelope" style="color: #3E6B47;"></i></div>
                     <p>contact@CultivTech.com</p>
                 </div>
                 <div class="contact-card">
-                    <div class="contact-icon">📞</div>
-                    <h3>Téléphone</h3>
-                    <p>+221 77 392 82 72</p>
+                    <div class="contact-icon"><i class="fa-solid fa-location-dot" style="color: #3E6B47;"></i></div>
+                    <p>Avenu cheikh Anta Diop Sénégal, Dakar</p>
                 </div>
-                <div class="contact-card">
-                    <div class="contact-icon">📍</div>
-                    <h3>Adresse</h3>
-                    <p>Avenu cheikh Anta Diop<br>Sénégal, Dakar</p>
+                <div class="nos-reseau">
+                    <p>SUIVEZ-NOUS SUR NOS DIFFERENTS RESEAUX</p>
+                    <div class="icon-reseau">
+                        <div><i class="fa-brands fa-linkedin" style="color: #3E6B47;background: #f1f8f4;  "></i></div>
+                        <div><i class="fa-brands fa-facebook" style="color: #3E6B47; background: #f1f8f4;  "></i></div>
+                        <div><i class="fa-brands fa-x-twitter" style="color: #f1f8f4;"></i></div>
+                        <div><i class="fa-brands fa-instagram" style="color: #3E6B47;   background: #f1f8f4;  "></i></div>
+                    </div> 
                 </div>
             </div>
             <div class="socio-info">
-                 <a href="#" class="social-button">LinkedIn</a>
-                 <a href="#" class="social-button">Twitter</a>
-                 <a href="#" class="social-button">Facebook</a>
-                 <a href="#" class="social-button">YouTube</a>
+                <h3>ECRIVEZ-NOUS</h3>
+                <form action="">
+                    <label for="nom">Nom complet</label>
+                    <input type="text" placeholder="votre nom">
+
+                    <label for="email">Adresse email</label>
+                    <input type="email" placeholder="votre email">
+
+                    <label for="message">Message</label>
+                    <textarea id="message" placeholder="votre message"></textarea>
+
+                    <button>Envoyez votre message</button>
+                </form>
             </div>
-             <p class="footer-note">
+        </div>
+         <p class="footer-note">
                 © 2025 CultivTech. Tous droits réservés. | Cultivons l'avenir ensemble 🌱
             </p>
-        </div>
     </section>
 </body>
 </html>
