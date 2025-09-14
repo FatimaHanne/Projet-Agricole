@@ -564,7 +564,7 @@ font-weight: 200;
 
 @media (max-width: 480px) {
     .hero {
-        padding: 4rem 1rem;
+        padding: 4rem 2rem;
     }
 
     .feature-card, .target-card, .contact-card {
