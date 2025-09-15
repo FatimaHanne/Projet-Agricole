@@ -128,7 +128,6 @@ nav {
     padding: 15px;
     position: relative;
     z-index: 1; 
- 
 }
 
 button{
@@ -136,7 +135,8 @@ padding: 10px;
 border-radius: 5px;
 border: none;
 font-size: 1rem;
-   margin: 15px;
+ margin: 15px;
+  cursor: pointer
 }
 .btn1{
     background-color: #2c5530;
@@ -385,6 +385,9 @@ h2::after {
   justify-content: center;
   transition: background 0.3s, transform 0.2s;
 }
+.icon-reseau i{
+  cursor: pointer
+}
 .icon-reseau::after {
  content: '';
     display: block;
@@ -432,6 +435,7 @@ h2::after {
   justify-content: center;
   min-width: 35px;
   min-height: 35px;
+    cursor: pointer;
 }
 .contact-card{
     display: flex;
@@ -452,6 +456,8 @@ form{
     color: #fff;
     border-radius: 10px;
     max-width: 250px;
+    transition: color 0.3s, background 0.3s;
+    cursor: pointer;
 }
 .socio-info{
 background-color: #fff;
